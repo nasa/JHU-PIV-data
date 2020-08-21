@@ -4,7 +4,7 @@
 
 1. Change directories in your Command Prompt or Terminal application
 ```bash
-cd <path_to_repo>
+cd \Users\blucci\Desktop\piv
 ```
 2. See changed files (they should show up as red)
 ```bash
