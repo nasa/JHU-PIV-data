@@ -1,5 +1,10 @@
 # JHU-PIV-data
 
+## REMEMBER: Pull Remote Repo changes frequently using this command:
+```bash
+git pull
+```
+
 ## Upload changes to this repo
 
 1. Change directories in your Command Prompt or Terminal application
