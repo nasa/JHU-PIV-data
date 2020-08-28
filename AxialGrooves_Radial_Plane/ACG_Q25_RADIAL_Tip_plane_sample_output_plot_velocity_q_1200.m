@@ -3,8 +3,10 @@
 % Ver 1.1 revised by Huang Chen @4/24/2015
 
 % define normalized parameters
+normvor = 1000/(2*pi*8); % Angular velocity of the Nasa pump at 480rpm. 
 normvel = 11.47; % tip speed of the Nasa pump at 480rpm. 
-normvor = 1000/(2*pi*8);
+% normvor = 1./(2*pi*8); % Angular velocity of the Nasa pump at 480rpm. 
+normTKE = 1./(11.4*11.4);  % UTUT for turbulence normalization
 
 % define font size and font name
 font_size = 20;
@@ -35,6 +37,7 @@ hold on
 xlim(x_lim);
 ylim(y_lim);
 
+title(all_data.Test_condition)
 xlabel('z/c_{A}','FontSize',font_size,'FontName',font_name,'FontWeight','bold')
 ylabel('y/L','FontSize',font_size,'FontName',font_name,'FontWeight','bold')
 
@@ -79,15 +82,16 @@ line([0.216,0.216],[-0.3928,-0.6546],'LineWidth',3,'Color',[1,1,1]);
 
 
 % Add colorbar
-h  = colorbar('northoutside');
-h.Position(1) = h.Position(1)+0.08;
-h.Position(2) = h.Position(2)+0.07;
-h.Position(3) = h.Position(3)-0.075;
-h.Position(4) = h.Position(4)/2;
+h  = colorbar('eastoutside');
+% h  = colorbar('northoutside');
+% h.Position(1) = h.Position(1)+0.08;
+% h.Position(2) = h.Position(2)+0.07;
+% h.Position(3) = h.Position(3)-0.075;
+% h.Position(4) = h.Position(4)/2;
 h.Ticks = v_lim(1):0.20:v_lim(2);
 % Add annotation
-text(x_lim(1),y_lim(2)+(y_lim(2)-y_lim(1))/20,['U_{r}' '/' 'U_{T}:'],'FontSize',font_size,'FontName',font_name,'FontWeight','bold');
-
+% text(x_lim(1),y_lim(2)+(y_lim(2)-y_lim(1))/20,['U_{r}' '/' 'U_{T}:'],'FontSize',font_size,'FontName',font_name,'FontWeight','bold');
+text(x_lim(2)+0.08,y_lim(1)+0.03+(y_lim(2)-y_lim(1))/2,['U_{r}' '/' 'U_{T}'],'FontSize',font_size,'FontName',font_name,'FontWeight','bold');
 
 % Add reference vector
 %text(x_lim(2)-0.012,y_lim(2)+(y_lim(2)-y_lim(1))/38,'U_{T}','FontSize',font_size,'FontName',font_name,'FontWeight','bold');
