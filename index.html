@@ -156,8 +156,8 @@
 													<div id="metadata_CommonCore">
 														
                                                         <h3 style="margin:.5em 0;">1 Smooth Wall, Small Tip Gap, Low Flow</h3>
-                                                        <button class="accordion">Show Files</button>
-                                                        <div class="panel">
+                                                        <button class="accordion">Show Files</button>  <!-- Add this line below each "h3" element in list -->
+                                                        <div class="panel"> <!-- Add this div with "anel" class around each file download table -->
                                                             <table class="fndtn-table" style="width:100%;" id="resources">
                                                                 <thead>
                                                                     <tr>
@@ -166,6 +166,16 @@
                                                                     </tr>
                                                                 </thead>
                                                                 <tbody>
+                                                                    <tr class="green">
+                                                                        </tr><tr>
+                                                                        <td><a title="Data1" href="https://data.nasa.gov/docs/datasets/aerothermodynamics/EAST/datasets/Test_47/release47.tgz" target="https://data.nasa.gov/docs/datasets/aerothermodynamics/EAST/datasets/Test_47/release47.tgz">s/c 103...</a></td>
+                                                                        <td>binary .mat file</td>
+                                                                    </tr>
+                                                                    <tr class="green">
+                                                                        </tr><tr>
+                                                                        <td><a title="Data1" href="https://data.nasa.gov/docs/datasets/aerothermodynamics/EAST/datasets/Test_47/release47.tgz" target="https://data.nasa.gov/docs/datasets/aerothermodynamics/EAST/datasets/Test_47/release47.tgz">Data​1</a></td>
+                                                                        <td>application/zip</td>
+                                                                    </tr>
                                                                     <tr class="green">
                                                                         </tr><tr>
                                                                         <td><a title="Data1" href="https://data.nasa.gov/docs/datasets/aerothermodynamics/EAST/datasets/Test_47/release47.tgz" target="https://data.nasa.gov/docs/datasets/aerothermodynamics/EAST/datasets/Test_47/release47.tgz">Data​1</a></td>
@@ -185,10 +195,13 @@
                                                                         <td><a title="Plot Code" href="Smoothwall_smallgap_lowflow/small_lowFlow_plot_TKE_1200.m" target="Smoothwall_smallgap_lowflow/small_lowFlow_plot_TKE_1200.m>Sample plot & figures">Plot Code</a></td>
                                                                         <td>MATLAB/.m</td>
                                                                     </tr>
+
                                                                 </tbody>
                                                             </table>
-                                                        </div>
-                                                        <br>
+                                                        </div> <!-- End of collapsibale list -->
+                                                        
+                                                        <br> <!-- Add line break -->
+
                                                         <tbody>
                                                             <tr> 
                                                                 <td><a title="README" href="templates/Figures1.html" target="templates/Figures1.html">See sample plot & figures</a></td>
