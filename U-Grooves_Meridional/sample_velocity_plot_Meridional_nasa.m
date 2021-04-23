@@ -1,8 +1,9 @@
 normvor = 1000/(2*pi*8); % Angular velocity of the Nasa pump at 480rpm. 
-normvel = 11.47; % tip speed of the Nasa pump at 480rpm. 
+normvel = 1./11.47; % tip speed of the Nasa pump at 480rpm. 
 normTKE = 1./(11.4*11.4);  % UTUT for turbulence normalization
 
-v_lim = [-0.5,0.8];
+% v_lim = [-100,100]; %vorticity limits
+v_lim = [-0.5,0.8]; %Vq limits
 
 
 % define font size and font name
@@ -29,7 +30,7 @@ fig.Position = [50,50,1600,800];
 
 % start with pseudo color plots
 % e = pcolor(all_data.norm_Zmesh,all_data.norm_Rmesh,medfilt2(all_data.vor_mean,[4,4]).*normvor);
-e = pcolor(all_data.norm_Zmesh,all_data.norm_Rmesh,medfilt2(all_data.Vq_mean,[1,1])./normvel);
+e = pcolor(all_data.norm_Zmesh,all_data.norm_Rmesh,medfilt2(all_data.Vq_mean,[1,1]).*normvel);
 
 shading interp
 % caxis([-50,50]);
@@ -88,6 +89,7 @@ h  = colorbar('eastoutside');
 
 % Add annotation
 % text(x_lim(1)-0.01,y_lim(2)+(y_lim(2)-y_lim(1))/15,['<\omega_{\theta}>' '/' '\Omega:'],'FontSize',font_size,'FontName',font_name,'FontWeight','bold');
+% text(x_lim(2)+0.055,y_lim(1)-0.02+(y_lim(2)-y_lim(1))/2,['<\omega_{\theta}>' '/' '\Omega:'],'FontSize',font_size,'FontName',font_name,'FontWeight','bold');
 text(x_lim(2)+0.055,y_lim(1)-0.02+(y_lim(2)-y_lim(1))/2,['U_{\theta}' '/' 'U_{T}'],'FontSize',font_size,'FontName',font_name,'FontWeight','bold');
 
 % Add reference vector
